@@ -176,37 +176,3 @@
 // },ar[0])
 // console.log(x)
 
-
-// q19) For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132
-
-
-
-// q20) For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array. Expected output: 22
-
-
-
-// q21) For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false
-
-
-
-// q22) For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element found in the array. Given number: 23, Expected output: 2 Given number: 34, Expected output: 3 Given number: 10, Expected output: 2 Given number: 54, Expected output: 1
-
-
-
-// q23) For the Given array: [23,34,54,10,4,7] print index of a given element in an Array. Given number: 23, Expected output: 0 Given number: 34, Expected output: 1 Given number: 10, Expected output: 3 Given number: 54, Expected output: 2
-
-
-
-// q24) a program to store an array into another array var ar = [23,34,54,10,4,7] var br = [ ] Expected output: br = [23,34,54,10,4,7]
-
-
-
-// q25) Sort an array in ascending order. Given array: [23,34,54,10,4,7] Expected output: 4,7,10,23,34,54
-
-
-
-// q26) Store only even numbers of a given array in another array.
-
-
-
-// q27) print only the perfect squares in an array
