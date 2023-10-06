@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsx-styling</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display each array object in flex boxes with respective gender images -->
+    <div id="app"></div>
+    <script type="text/babel">
+        var obj1 = [{
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }, {
+            firstname: 'paapam',
+            lastname: 'pasivadu',
+            age: 30,
+            gender: 'male'
+        }, {
+            firstname: 'nibba',
+            lastname: 'nibbi',
+            age: 18,
+            gender: 'female'
+        }, {
+            firstname: 'hello',
+            lastname: 'babai',
+            age: 40,
+            gender: 'male'
+        }];
+        function deleteTask(index) {
+            obj1.splice(index, 1);
+            console.log(obj1);
+            ReactDOM.render(table(), document.getElementById('app'))
+        }
+        function table() {
+            var b = <table border='2px'>
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>lastname</th>
+                        <th>age</th>
+                        <th>gender</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        obj1.map((c, i) =>
+                            <tr>
+                                <td>{c.firstname}</td>
+                                <td>{c.lastname}</td>
+                                <td>{c.age}</td>
+                                <td>{c.gender}</td>
+                                <td><button onClick={() => {
+                                    deleteTask(i)
+                                }}>Delete</button></td>
+                            </tr>
+                        )
+                    }
+                </tbody>
+            </table>
+            return b;
+        }
+        ReactDOM.render(table(), document.getElementById('app'))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+<body>
+    <!-- Print the given array of students in cards -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        var a = [{
+            firstname: 'Nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        },
+        {
+            firstname: 'mahi',
+            lastname: 'dhini',
+            age: 40,
+            gender: 'male'
+        },
+        {
+            firstname: 'pilla',
+            lastname: 'bacha',
+            age: 10,
+            gender: 'female'
+        },
+        {
+            firstname: 'arjun',
+            lastname: 'allu',
+            age: 45,
+            gender: 'male'
+        }
+        ];
+        var StudentCard = ({ firstname, lastname, age, gender }) => (
+            <div style={{ border: "2px solid black", padding: "10px", margin: "10px" }}>
+                <h2>{firstname} {lastname}</h2>
+                <p>Age: {age}</p>
+                <p>Gender: {gender}</p>
+            </div>
+        );
+        var cards = a.map(s => <StudentCard {...s} />);
+
+        ReactDOM.render(<div>{cards}</div>, document.getElementById("d1"))
+    </script>
+</body>
+</html>

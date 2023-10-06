@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Evaluate expression in JSX element in HTML -->
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <script type="text/babel">
+        var a = <h1>{322-2322}</h1>
+        ReactDOM.render(a,document.getElementById('d1'))
+        var b = <h1>{3222+322}</h1>
+        ReactDOM.render(b,document.getElementById('d2'))
+        var c = <h1>{3222*2322}</h1>
+        ReactDOM.render(c,document.getElementById('d3'))
+        var d = <h1>{3222/2322}</h1>
+        ReactDOM.render(d,document.getElementById('d4'))
+    </script>
+</body>
+
+</html>

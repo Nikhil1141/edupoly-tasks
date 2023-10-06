@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display different elements conditionally JSX -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        var a = 31;
+        var b = 211;
+        var c = 113;
+        var d = <h1> {Math.min(a,b,c)}  </h1>
+        ReactDOM.render(d, document.getElementById('d1'))
+    </script>
+</body>
+
+</html>

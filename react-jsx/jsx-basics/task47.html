@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Print a student details align with gender image -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        var a = [{
+            firstname: 'Nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        },
+        {
+            firstname: 'mahi',
+            lastname: 'dhini',
+            age: 40,
+            gender: 'male'
+        },
+        {
+            firstname: 'pilla',
+            lastname: 'bacha',
+            age: 10,
+            gender: 'female'
+        },
+        {
+            firstname: 'arjun',
+            lastname: 'allu',
+            age: 45,
+            gender: 'male'
+        }
+        ]
+        var x = 'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1696291200&semt=ais';
+        var y = 'https://images.unsplash.com/photo-1591980896142-4e36328411ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwZmVtYWxlfGVufDB8fDB8fHww&w=1000&q=80';
+        var b =
+            <table border='2' style={{ border: "2px solid black" }}>{
+                a.map(c => 
+                    <tr>
+                        <td>{c.firstname}</td>
+                        <td>{c.lastname}</td>
+                        <td>{c.age}</td>
+                        <td> <img src={c.gender==="male"?x:y} width="100px" height="100px" /></td>
+                    </tr>
+                )}
+            </table>
+        ReactDOM.render(b, document.getElementById("d1"))
+    </script>
+</body>
+
+</html>

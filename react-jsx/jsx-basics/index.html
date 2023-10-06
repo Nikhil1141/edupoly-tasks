@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <div id="app1"></div>
+    <script type="text/babel">
+        var rel = React.createElement('h1', {style:{color:'green'}}, 'Hello World');
+        ReactDOM.render(rel, document.getElementById('app'))
+
+        var listOfItems = <ol style={{color:'red'}} className="list-of-familymembers" type="a">
+            <li className="familymember-1">Nikhil</li>
+            <li className="familymember-2">ram</li>
+            <li className="familymember-3">Nanna</li>
+            <li className="familymember-4">amma</li>
+        </ol>;
+        ReactDOM.render(listOfItems, document.getElementById('app1'));
+    </script>
+</body>
+
+</html>

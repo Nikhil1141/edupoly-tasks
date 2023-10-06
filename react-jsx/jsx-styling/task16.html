@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsx-styling</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display even array value in green and odd in red list items -->
+    <div id="app"></div>
+    <script type="text/babel">
+        var a = [23,43,6,2,65,54,32];
+        var b = <div>
+            {
+                a.map(c=> <li style={c%2===0?{backgroundColor:'green'}:{backgroundColor:'red'}}>{c}</li> )
+            }
+            </div>
+        ReactDOM.render(b, document.getElementById('app'))
+    </script>
+</body>
+    
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Print String praveen in uppercase in JSX element in HTML -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        var b = "Nikhil"
+        var a = <h1>{b.toUpperCase()}</h1>
+        ReactDOM.render(a,document.getElementById('d1'))
+    </script>
+</body>
+
+</html>

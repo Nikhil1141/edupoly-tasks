@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsx-styling</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display each object properties -->
+    <div id="app"></div>
+    <div id="app1"></div>
+    <div id="app2"></div>
+    <script type="text/babel">
+        var obj1 = {
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }
+        var b = <div style={{border: '2px solid black'}}>{Object.entries(obj1).map(c => <div style={{ backgroundColor: 'yellow', padding: '10px', display: 'flex', justifyContent: 'center' }}>{c[0]}: {c[1]}</div>)}</div>
+        ReactDOM.render(b, document.getElementById('app'))
+
+        // or
+
+        var obj2 = {
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }
+        var x = <div style={{border: '2px solid red'}}>{Object.values(obj1).map(y => <div style={{ backgroundColor: 'lightgreen',  padding: '10px', display: 'flex', justifyContent: 'center' }}>{y}</div>)}</div>
+        ReactDOM.render(x, document.getElementById('app1'))
+
+        // or
+
+        var obj3 = {
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }
+        var k = <div style={{border: '2px solid brown'}}>{Object.keys(obj1).map(y => <div style={{ backgroundColor: 'lightblue', padding: '10px', display: 'flex', justifyContent: 'center' }}>{y}</div>)}</div>
+        ReactDOM.render(k, document.getElementById('app2'))
+    </script>
+</body>
+
+</html>

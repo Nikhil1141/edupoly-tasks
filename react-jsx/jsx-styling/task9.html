@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsx-styling</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display array of objects in table with female students row in pink -->
+    <div id="app"></div>
+    <script type="text/babel">
+        var obj1 = [{
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }, {
+            firstname: 'paapam',
+            lastname: 'pasivadu',
+            age: 30,
+            gender: 'male'
+        }, {
+            firstname: 'nibba',
+            lastname: 'nibbi',
+            age: 18,
+            gender: 'female'
+        }, {
+            firstname: 'hello',
+            lastname: 'babai',
+            age: 40,
+            gender: 'male'
+        }, {
+            firstname: 'hello',
+            lastname: 'atha',
+            age: 43,
+            gender: 'female'
+        }];
+        function table() {
+            var b = <table border='2px'>
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>lastname</th>
+                        <th>age</th>
+                        <th>gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        obj1.map(c =>
+                            <tr style={c.gender==='female'?{backgroundColor:'lightpink'}:{}}>
+                                <td>{c.firstname}</td>
+                                <td>{c.lastname}</td>
+                                <td>{c.age}</td>
+                                <td>{c.gender}</td>
+                            </tr>
+                        )
+                    }
+                </tbody>
+            </table>
+            return b;
+        }
+        ReactDOM.render(table(), document.getElementById('app'))
+    </script>
+</body>
+
+</html>

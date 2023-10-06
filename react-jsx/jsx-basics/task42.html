@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Print the images as table cells from array of image urls -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        var a = ['https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg', 'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 'https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928_640.jpg'];
+        var b = a.map(c => <table><tr> <img src={c} alt="img" width="200px" height="200px" /> </tr></table>);
+        ReactDOM.render(b, document.getElementById("d1"))
+    </script>
+</body>
+
+</html>

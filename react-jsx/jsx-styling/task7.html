@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsx-styling</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Display each array object in flex boxes with respective gender images -->
+    <div id="app"></div>
+    <script type="text/babel">
+        var obj1 = [{
+            firstname: 'nikhil',
+            lastname: 'eswar',
+            age: 20,
+            gender: 'male'
+        }, {
+            firstname: 'paapam',
+            lastname: 'pasivadu',
+            age: 30,
+            gender: 'male'
+        }, {
+            firstname: 'nibba',
+            lastname: 'nibbi',
+            age: 18,
+            gender: 'female'
+        }, {
+            firstname: 'hello',
+            lastname: 'babai',
+            age: 40,
+            gender: 'male'
+        }, {
+            firstname: 'hello',
+            lastname: 'thammudu',
+            age: 10,
+            gender: 'male'
+        }, {
+            firstname: 'hello',
+            lastname: 'pinni',
+            age: 40,
+            gender: 'female'
+        }, {
+            firstname: 'hello',
+            lastname: 'atha',
+            age: 43,
+            gender: 'female'
+        }]
+        var img1 = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+        var img2 = 'https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696550400&semt=sph'
+        var b = <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {
+                obj1.map(c =>
+                    <div style={{ border: '2px solid black', backgroundColor: 'yellow', padding: '10px', margin: '10px' }}>
+                        <p>Firstname: {c.firstname}</p>
+                        <p>lastname: {c.lastname}</p>
+                        <p>age: {c.age}</p>
+                        <img src={c.gender==='male'?img1:img2} style={{height:"50px", width:"50px", borderRadius:"50%"}} />
+                    </div>
+                )
+            }
+        </div>
+        ReactDOM.render(b, document.getElementById('app'))
+    </script>
+</body>
+
+</html>

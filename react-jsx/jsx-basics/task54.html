@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- Likes dislikes-JSX -->
+    <div id="d1"></div>
+    <script type="text/babel">
+        function likedislike(){
+            var likes=0;
+            var dislikes=0;
+            var btn1 = <button id="btn1">like</button>
+            var btn2 = <button id="btn2">dislike</button>
+            
+            return likedislike();
+        }
+        ReactDOM.render(likedislike(), document.getElementById("d1"))
+    </script>
+</body>
+
+</html>
