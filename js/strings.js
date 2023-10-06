@@ -43,3 +43,4 @@ q10) Delete all occurrences of a character from a string.
 var a = "Nikhileswar";
 var b = a.split().slice();
 console.log(b)
+
